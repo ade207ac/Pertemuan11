@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    function tampilGambar() {
+      let nilaiTerpilih = document.getElementById("pilihGambar").value;
+      switch (nilaiTerpilih) {
+        case "gambar1":
+          gambarPilih.src = "src/gambar1.jpeg";
+          break;
+        case "gambar2":
+          gambarPilih.src = "src/gambar2.jpeg";
+          break;
+        case "gambar3":
+          gambarPilih.src = "src/gambar3.jpeg";
+          break;
+        case "gambar4":
+          gambarPilih.src = "src/gambar4.jpeg";
+          break;
+      }
+    }
+  </script>
+</head>
+<body>
+  <h2>Ganti Gambar</h2>
+  <label for="pilihGambar">Pilih Gambar: </label>
+  <select id="pilihGambar" onchange="tampilGambar()">
+    <option value="gambar1">Acone</option>
+    <option value="gambar2">Adiel</option>
+    <option value="gambar3">Boteq</option>
+    <option value="gambar4">Lutfi</option>
+  </select>
+  <br>
+  <img src="Pertemuan11/gambar1.jpeg" id="gambarPilih" alt="kosong" width="500">
+</body>
+</html>
