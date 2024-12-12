@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Kalkulator Sederhana</title>
+  <script>
+    function hitung() {
+      let x = parseInt(document.getElementById("bilangan1").value);
+      let y = parseInt(document.getElementById("bilangan2").value);
+      let operasi = document.querySelector('input[name="operasi"]:checked').id;
+
+      let hasil = 0;
+
+      if (operasi = "tambah") {
+        hasil = x + y;
+      } else if (operasi = "kurang") {
+        hasil = x - y;
+      } else if (operasi = "bagi") {
+        hasil = x / y;
+      } else if (operasi = "kali") {
+        hasil = x * y;
+      }
+
+      document.getElementById("hasil").innerHTML = hasil;
+    }
+  </script>
+</head>
+<body>
+  <h2>Kalkulator Sederhana</h2>
+  <form action="">
+    Bilangan 1: <input type="number" id="bilangan1">
+    <br>
+    Bilangan 2: <input type="number" id="bilangan2">
+    <br>
+    Pilih Operasi Aritmatika:
+    <input type="radio" name="operasi" id="tambah">+
+    <input type="radio" name="operasi" id="kurang">-
+    <input type="radio" name="operasi" id="bagi">:
+    <input type="radio" name="operasi" id="kali">x
+    <br>
+    <input type="button" value="Hitung" onclick="hitung()">
+    <br>
+    Hasil: <span id="hasil"></span>
+  </form>
+</body>
+</html>
